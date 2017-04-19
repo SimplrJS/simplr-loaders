@@ -2,6 +2,7 @@
   "name": "simplr-loaders-example",
   "version": "0.1.0",
   "description": "Example for simplr-loaders.",
+  "private": true,
   "main": "./dist/index.html",
   "scripts": {
     "test": "tsc -p . --noEmit",

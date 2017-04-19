@@ -2,10 +2,10 @@
 
 ### [Breaking changes]
 - Directories structure changed. All production files moved to `dist` folder.
-- `blackLoader` prop deprecated in `SpinnerLoader`.
-- `color` prop deprecated in `BubbleLoader`.
+- `blackLoader` prop removed from `SpinnerLoader`.
+- `color` prop removed from `BubbleLoader`.
 
-`color` and `blackLoader` props are deprecated leaving you a posibility to set them using CSS.
+`color` and `blackLoader` props are removed leaving you a posibility to set them using CSS.
 
 Setting color of `SpinnerLoader`:
 ```css
@@ -26,7 +26,7 @@ Setting color of `BubbleLoader`:
 
 ### [Dev]
 - `glob-uglifyjs` version updated.
-- `pushstate-server` version updated.
+- `pushstate-server` moved to `example`.
 - `react` and `@types/react` versions updated.
 - `tslint` added.
 - `css-to-ts` added to have css in TypeScript files.

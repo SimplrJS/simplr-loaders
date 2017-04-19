@@ -15,8 +15,7 @@
     "build-ts": "tsc -p .",
     "tslint": "tslint --project \"./tsconfig.json\" --c \"./tslint.json\"",
     "uglifyjs": "glob-uglifyjs",
-    "release": "npm run build && npm run tslint && npm run uglifyjs",
-    "cleanup-package-json": "cpj"
+    "release": "npm run build && npm run tslint && npm run uglifyjs"
   },
   "repository": {
     "type": "git",
@@ -40,18 +39,18 @@
   },
   "homepage": "https://github.com/SimplrJS/simplr-loaders",
   "devDependencies": {
-    "cleanup-package-json": "^0.2.1",
     "css-to-ts": "0.1.0-beta.9",
     "glob-uglifyjs": "0.4.0",
     "node-sass": "^4.5.0",
-    "pushstate-server": "^3.0.0",
     "tslint": "^5.1.0",
     "typescript": "^2.0.9"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "@types/react": "15.0.21",
-    "@types/react-dom": "^0.14.20"
+    "react-dom": "^15.3.2"
+  },
+  "dependencies": {
+    "@types/react": "15.0.22",
+    "@types/react-dom": "^15.5.0"
   }
 }

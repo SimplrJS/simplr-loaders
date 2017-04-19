@@ -15,7 +15,7 @@ import { BubbleLoader } from "simplr-loaders";
 
 export class MyComponent extends React.Component<{}, {}> {
     render() {
-        return <BubbleLoader/>;
+        return <BubbleLoader />;
     }
 }
 ```
