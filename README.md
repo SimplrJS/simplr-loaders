@@ -51,7 +51,7 @@ $ npm install
 ```
 3. Go to 'example' folder and run:
 ```sh
-$ npm run example && npm run server
+$ npm run example && npm run start
 ```
 
 # API

@@ -49,7 +49,7 @@
         "tslint": "^5.1.0",
         "typescript": "^2.0.9"
     },
-    "peerDependencies": {
+    "dependencies": {
         "react": "^15.3.2",
         "react-dom": "^15.3.2",
         "@types/react": "15.0.21",
