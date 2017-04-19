@@ -8,13 +8,13 @@ import { LoaderBase, BaseProps } from "../abstractions/loader-base";
  * @extends {LoaderBase<BaseProps, {}>}
  */
 export declare class BubbleLoader extends LoaderBase<BaseProps, {}> {
-    constructor(props: BaseProps);
+    constructor(props: BaseProps, context: any);
     /**
      * Id of bubble loader.
      *
      * @type {string}
      * @memberOf BubbleLoader
      */
-    LoaderId: string;
+    protected LoaderId: string;
     render(): JSX.Element;
 }

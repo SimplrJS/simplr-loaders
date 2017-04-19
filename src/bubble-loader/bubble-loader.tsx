@@ -10,9 +10,9 @@ import { LoaderBase, BaseProps } from "../abstractions/loader-base";
  * @extends {LoaderBase<BaseProps, {}>}
  */
 export class BubbleLoader extends LoaderBase<BaseProps, {}> {
-    constructor(props: BaseProps) {
-        super(props);
-        this.AppendStyles(BubbleLoaderStyle, props);
+    constructor(props: BaseProps, context: any) {
+        super(props, context);
+        this.AppendStyles(BubbleLoaderStyle);
     }
 
     /**
@@ -21,7 +21,7 @@ export class BubbleLoader extends LoaderBase<BaseProps, {}> {
      * @type {string}
      * @memberOf BubbleLoader
      */
-    LoaderId: string = "bubble-loader";
+    protected LoaderId: string = "bubble-loader";
 
     render() {
         return <div className={this.AggregatedClassName}>

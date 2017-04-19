@@ -10,9 +10,9 @@ import { LoaderBase, BaseProps } from "../abstractions/loader-base";
  * @extends {LoaderBase<BaseProps, {}>}
  */
 export class SpinnerLoader extends LoaderBase<BaseProps, {}> {
-    constructor(props: BaseProps) {
-        super(props);
-        this.AppendStyles(SpinnerLoaderStyle, props);
+    constructor(props: BaseProps, context: any) {
+        super(props, context);
+        this.AppendStyles(SpinnerLoaderStyle);
     }
 
     /**
@@ -21,7 +21,7 @@ export class SpinnerLoader extends LoaderBase<BaseProps, {}> {
      * @type {string}
      * @memberOf SpinnerLoader
      */
-    LoaderId: string = "spinner-loader";
+    protected LoaderId: string = "spinner-loader";
 
     render() {
         return <div className={this.AggregatedClassName}>

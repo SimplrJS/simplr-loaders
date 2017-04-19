@@ -65,14 +65,14 @@ export abstract class LoaderBase<TProps extends BaseProps, TState> extends React
      * Unique identifier of a loader.
      * Used in `protected AppendStyles` to prevent styles duplications.
      */
-    abstract LoaderId: string;
+    protected abstract LoaderId: string;
 
     /**
      * Puts stringified stylesheet of a loader to the `<head>`.
      * @param styles {string} strigified stylesheet of a loader.
      */
-    protected AppendStyles(styles: string, props: TProps) {
-        if (props.useDefaultStyle === false) {
+    protected AppendStyles(styles: string) {
+        if (this.props.useDefaultStyle === false) {
             return;
         }
 

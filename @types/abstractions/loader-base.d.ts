@@ -61,12 +61,12 @@ export declare abstract class LoaderBase<TProps extends BaseProps, TState> exten
      * Unique identifier of a loader.
      * Used in `protected AppendStyles` to prevent styles duplications.
      */
-    abstract LoaderId: string;
+    protected abstract LoaderId: string;
     /**
      * Puts stringified stylesheet of a loader to the `<head>`.
      * @param styles {string} strigified stylesheet of a loader.
      */
-    protected AppendStyles(styles: string, props: TProps): void;
+    protected AppendStyles(styles: string): void;
     /**
      * Default className of a loader component.
      *

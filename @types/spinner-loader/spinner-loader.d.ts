@@ -8,13 +8,13 @@ import { LoaderBase, BaseProps } from "../abstractions/loader-base";
  * @extends {LoaderBase<BaseProps, {}>}
  */
 export declare class SpinnerLoader extends LoaderBase<BaseProps, {}> {
-    constructor(props: BaseProps);
+    constructor(props: BaseProps, context: any);
     /**
      * Id of spinner loader.
      *
      * @type {string}
      * @memberOf SpinnerLoader
      */
-    LoaderId: string;
+    protected LoaderId: string;
     render(): JSX.Element;
 }

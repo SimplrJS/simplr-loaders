@@ -1,25 +1,23 @@
 import * as React from "react";
+import * as classNames from "classnames";
 
 export interface Props {
-    imageClass?: string;
+    className?: string;
 }
 
 export class LogoImage extends React.Component<Props, {}> {
     render() {
-        return <span className={`logo ${(this.props.imageClass != null ? this.props.imageClass : "")}`}></span>;
+        return <span className={classNames("logo", this.props.className)}></span>;
     }
 }
 
 export class Logo extends React.Component<Props, {}> {
     render() {
-        return <a
-            href="https://simplrjs.com"
-            className="logo-container"
-        >
-            <span className={`logo ${(this.props.imageClass != null ? this.props.imageClass : "")}`}></span>
+        return <a href="https://simplrjs.com" className="logo-container">
+            <span className={classNames("logo", this.props.className)}></span>
             <div className="title">
                 SimplrJS
-                    </div>
+            </div>
         </a>;
     }
 }

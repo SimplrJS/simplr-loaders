@@ -44,7 +44,7 @@ We found it useful for loaders to center and expand to take all possible area ar
 If you want to position loader yourself your can set prop `shouldReduceSize={true}`. 
 
 # Example
-1. Clone this repository;
+1. Clone this repository
 2. Install packages in simplr-loaders root directory:
 ```sh
 $ npm install
@@ -63,18 +63,16 @@ export abstract class LoaderBase<TProps extends BaseProps, TState> extends React
 ```
 `LoaderBase` is a base class of all loader components in `simplr-loaders`.
 
-### `abstract LoaderId: string;`
+### `protected abstract LoaderId: string;`
 Unique identifier of a loader.
 
 ### `protected StylesClass: string;`
-Default className of a loader component.
+Default className of a loader component. If not declared, `LoaderId` will be taken as default className.
 
-### `protected AppendStyles(styles: string, props: TProps)`
+### `protected AppendStyles(styles: string)`
 Puts stringified stylesheet of a loader into the `<head>`.
 
 `styles: string` - stringified stylesheet.
-
-`props: TProps` - component props.
 
 ### `protected get AggregatedClassName()`
 Aggregates all classNames of a loader:
@@ -141,18 +139,18 @@ import { LoaderBase, BaseProps } from "../abstractions/loader-base";
 
 // Loader MUST extend LoaderBase class.
 // Every loader MUST have props that are defined in BaseProps.
-// If you need some more props, you can create your own props interface with BaseProps extended.
+// If you need more props, you can create your own interface with BaseProps extended.
 export class MyLoader extends LoaderBase<BaseProps, {}> {
 
     // Load style using `AppendStyles` from LoaderBase. 
-    constructor(props: BaseProps) {
-        super(props); 
-        this.AppendStyles(MyLoaderStyle, props);
+    constructor(props: BaseProps, context: any) {
+        super(props, context); 
+        this.AppendStyles(MyLoaderStyle);
     }
 
     // Define loader id.
     // Id is used to identify style in `<head>`.
-    LoaderId: string = "my-loader";
+    protected LoaderId: string = "my-loader";
 
     // This property is optional.
     // If you don't define `StylesClass`, `LoaderId` will be taken as 'StylesClass'.

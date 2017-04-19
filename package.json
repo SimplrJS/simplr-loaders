@@ -33,13 +33,12 @@
         "@types",
         "dist",
         "*.md",
-        "package.json",
         "LICENSE"
     ],
     "bugs": {
         "url": "https://github.com/SimplrJS/simplr-loaders/issues"
     },
-    "homepage": "https://github.com/SimplrJS/simplr-loaders#readme",
+    "homepage": "https://github.com/SimplrJS/simplr-loaders",
     "devDependencies": {
         "cleanup-package-json": "^0.2.1",
         "css-to-ts": "0.1.0-beta.9",

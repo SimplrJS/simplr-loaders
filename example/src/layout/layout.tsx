@@ -34,7 +34,7 @@ export class Layout extends React.Component<{}, {}> {
             <footer>
                 <section className="columns">
                     <section className="column">
-                        <LogoImage imageClass="light" />
+                        <LogoImage className="light" />
                     </section>
                     <section className="column">
                         <h6>About us</h6>
