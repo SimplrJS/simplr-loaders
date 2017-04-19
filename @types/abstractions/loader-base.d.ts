@@ -37,14 +37,15 @@ export interface BaseProps {
      */
     useDefaultStyle?: boolean;
     /**
-     * Specifies whether loader should take area of a strict size.
-     * By default a loader should expand to take all possible area.
-     * Using this prop you can cancel default behavior.
+     * Specifies whether the loader should expand to take all possible area.
+     * Default value `true`.
+     * Using this prop you can cancel the default behavior.
+     * In that case the loader will take an area of a strict size.
      *
      * @type {boolean}
      * @memberOf BaseProps
      */
-    shouldReduceSize?: boolean;
+    shouldExpand?: boolean;
 }
 /**
  * Base class of all loader components in simplr-loaders.

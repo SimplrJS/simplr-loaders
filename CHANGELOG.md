@@ -4,6 +4,7 @@
 - Directories structure changed. All production files moved to `dist` folder.
 - `blackLoader` prop removed from `SpinnerLoader`.
 - `color` prop removed from `BubbleLoader`.
+- `shouldReduceSize` props changed to `shouldExpand`. Default value `shouldExpand={true}`. 
 
 `color` and `blackLoader` props are removed leaving you a posibility to set them using CSS.
 

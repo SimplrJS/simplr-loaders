@@ -1,5 +1,5 @@
 # simplr-loaders
-React css loaders with no prerequisite style loading.
+React CSS loaders with no prerequisites for required styles loading.
 
 # Get started
 
@@ -39,9 +39,9 @@ and load it from stylesheets that are included in this package.
 
 ### Use of space
 
-We found it useful for loaders to center and expand to take all possible area around.
+We found it useful for loaders to center itself and expand to take all possible area around.
 
-If you want to position loader yourself your can set prop `shouldReduceSize={true}`. 
+If you want to position loader yourself you can set prop `shouldExpand={false}`.
 
 # Example
 1. Clone this repository
@@ -103,14 +103,15 @@ export interface BaseProps {
      */
     useDefaultStyle?: boolean;
     /**
-     * Specifies whether loader should take area of a strict size.
-     * By default a loader should expand to take all possible area.
-     * Using this prop you can cancel default behavior.
+     * Specifies whether the loader should expand to take all possible area.
+     * Default value `true`.
+     * Using this prop you can cancel the default behavior.
+     * In that case the loader will take an area of a strict size.
      *
      * @type {boolean}
      * @memberOf BaseProps
      */
-    shouldReduceSize?: boolean;
+    shouldExpand?: boolean;
 }
 ```
 

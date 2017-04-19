@@ -13,7 +13,7 @@ export interface OnChange {
 
 export interface LoaderParams {
     className: string;
-    shouldReduceSize: boolean;
+    shouldExpand: boolean;
 }
 
 interface State {
@@ -29,23 +29,23 @@ export class ParamsPicker extends React.Component<Props, State> {
     static defaultProps: Partial<Props> = {
         params: {
             className: "",
-            shouldReduceSize: false
+            shouldExpand: true
         }
     };
 
     private onClassNameChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
         const newParams: LoaderParams = {
             className: event.target.value,
-            shouldReduceSize: this.props.params!.shouldReduceSize
+            shouldExpand: this.props.params!.shouldExpand
         };
 
         this.props.onChange(this.props.loaderId, newParams);
     }
 
-    private onShouldReduceSizeChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    private onShouldExpandChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
         const newParams: LoaderParams = {
             className: this.props.params!.className,
-            shouldReduceSize: event.target.checked
+            shouldExpand: event.target.checked
         };
 
         this.props.onChange(this.props.loaderId, newParams);
@@ -84,8 +84,8 @@ export class ParamsPicker extends React.Component<Props, State> {
                 <input type="text" value={this.props.params!.className} onChange={this.onClassNameChange} />
             </div>
             <div className="param-field">
-                <h5>shouldReduceSize</h5>
-                <input type="checkbox" checked={this.props.params!.shouldReduceSize} onChange={this.onShouldReduceSizeChange} />
+                <h5>shouldExpand</h5>
+                <input type="checkbox" checked={this.props.params!.shouldExpand} onChange={this.onShouldExpandChange} />
             </div>
             <h4>Css</h4>
             <div className="param-field">

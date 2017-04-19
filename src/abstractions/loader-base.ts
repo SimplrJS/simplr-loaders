@@ -39,14 +39,15 @@ export interface BaseProps {
      */
     useDefaultStyle?: boolean;
     /**
-     * Specifies whether loader should take area of a strict size.
-     * By default a loader should expand to take all possible area.
-     * Using this prop you can cancel default behavior.
+     * Specifies whether the loader should expand to take all possible area.
+     * Default value `true`.
+     * Using this prop you can cancel the default behavior.
+     * In that case the loader will take an area of a strict size.
      *
      * @type {boolean}
      * @memberOf BaseProps
      */
-    shouldReduceSize?: boolean;
+    shouldExpand?: boolean;
 }
 
 /**
@@ -114,7 +115,7 @@ export abstract class LoaderBase<TProps extends BaseProps, TState> extends React
             className += " " + this.props.className;
         }
 
-        if (this.props.shouldReduceSize === true) {
+        if (this.props.shouldExpand === false) {
             className += " " + REDUCED_LOADER_CLASSNAME;
         } else {
             className += " " + EXPANDED_LOADER_CLASSNAME;
