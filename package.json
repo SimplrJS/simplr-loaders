@@ -1,6 +1,6 @@
 {
   "name": "simplr-loaders",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Simplr css loaders as React components.",
   "main": "dist/simplr-loaders.js",
   "author": "simplrjs <simplr@quatrodev.com> (https://github.com/simplrjs)",
