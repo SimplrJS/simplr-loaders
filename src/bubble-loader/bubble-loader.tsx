@@ -12,7 +12,7 @@ import { LoaderBase, BaseProps } from "../abstractions/loader-base";
 export class BubbleLoader extends LoaderBase<BaseProps, {}> {
     constructor(props: BaseProps, context: any) {
         super(props, context);
-        this.AppendStyles(BubbleLoaderStyle);
+        this.AppendStyles(BubbleLoaderStyle, props);
     }
 
     /**

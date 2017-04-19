@@ -12,7 +12,7 @@ import { LoaderBase, BaseProps } from "../abstractions/loader-base";
 export class SpinnerLoader extends LoaderBase<BaseProps, {}> {
     constructor(props: BaseProps, context: any) {
         super(props, context);
-        this.AppendStyles(SpinnerLoaderStyle);
+        this.AppendStyles(SpinnerLoaderStyle, props);
     }
 
     /**

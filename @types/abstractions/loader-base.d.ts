@@ -65,8 +65,9 @@ export declare abstract class LoaderBase<TProps extends BaseProps, TState> exten
     /**
      * Puts stringified stylesheet of a loader to the `<head>`.
      * @param styles {string} strigified stylesheet of a loader.
+     * @param props {TProps} props of loader component.
      */
-    protected AppendStyles(styles: string): void;
+    protected AppendStyles(styles: string, props: TProps): void;
     /**
      * Default className of a loader component.
      *

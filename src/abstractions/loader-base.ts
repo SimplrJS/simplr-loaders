@@ -70,9 +70,10 @@ export abstract class LoaderBase<TProps extends BaseProps, TState> extends React
     /**
      * Puts stringified stylesheet of a loader to the `<head>`.
      * @param styles {string} strigified stylesheet of a loader.
+     * @param props {TProps} props of loader component.
      */
-    protected AppendStyles(styles: string) {
-        if (this.props.useDefaultStyle === false) {
+    protected AppendStyles(styles: string, props: TProps) {
+        if (props.useDefaultStyle === false) {
             return;
         }
 

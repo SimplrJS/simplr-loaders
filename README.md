@@ -69,10 +69,12 @@ Unique identifier of a loader.
 ### `protected StylesClass: string;`
 Default className of a loader component. If not declared, `LoaderId` will be taken as default className.
 
-### `protected AppendStyles(styles: string)`
+### `protected AppendStyles(styles: string, props: TProps)`
 Puts stringified stylesheet of a loader into the `<head>`.
 
 `styles: string` - stringified stylesheet.
+
+`props: TProps` - component props.
 
 ### `protected get AggregatedClassName()`
 Aggregates all classNames of a loader:
@@ -145,7 +147,7 @@ export class MyLoader extends LoaderBase<BaseProps, {}> {
     // Load style using `AppendStyles` from LoaderBase. 
     constructor(props: BaseProps, context: any) {
         super(props, context); 
-        this.AppendStyles(MyLoaderStyle);
+        this.AppendStyles(MyLoaderStyle, props);
     }
 
     // Define loader id.
