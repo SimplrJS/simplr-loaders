@@ -1,0 +1,10 @@
+{
+    "pattern": "/**/*",
+    "options": {
+        "MinifyOptions": {},
+        "OutDir": "dist",
+        "RootDir": "dist",
+        "RemoveSource": false,
+        "UseMinExt": false
+    }
+}

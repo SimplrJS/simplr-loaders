@@ -1,0 +1,232 @@
+@import "./config";
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // font-family: proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  // font-family: "Open Sans";
+  // font-family: inherit;
+
+  .logo-container {
+    display: inline-flex;
+    height: 32px;
+    
+    >.title {
+      padding-left: 7px;
+      font-size: 18px;
+      line-height: 18px;
+      height: 30px;
+
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+     &:hover {
+        background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),#848484,rgba(255,255,255,0));
+        -moz-background-size: 100% 1px;
+        -o-background-size: 100% 1px;
+        -webkit-background-size: 100% 1px;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        >.title {
+          color: darken(white, 15);
+        }
+
+        >.logo {
+          opacity: 0.8;
+        }
+      }
+  }
+
+  .logo {
+      background-image: url('//simplrjs.com/2d6ef28fe65d68ce6ea8e1a7db2a4e2d.jpg');
+      background-size: cover;
+
+      background-size: cover;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+
+      &.light {
+        background-image: url('//simplrjs.com/0ab87a640ebb6e10e33a64ad3c8e672b.jpg');
+      }
+  }
+
+  header.top-bar {
+    width: 100%;
+    color: white;
+    background: #122333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    section {
+      max-width: $max-width;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      @media (max-width: 600px) {
+        justify-content: space-around;
+      }
+      
+      a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: darken(white, 15);
+        }
+      }
+
+      nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .link-container {
+          margin-right: 30px;
+          display: flex;
+          align-items: center;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:hover {
+            background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),#848484,rgba(255,255,255,0));
+            -moz-background-size: 100% 1px;
+            -o-background-size: 100% 1px;
+            -webkit-background-size: 100% 1px;
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            background-position: bottom;
+          }
+        }
+      }
+    }
+  }
+
+  > section.content {
+    flex: 1 0 auto;
+    width: 100%;
+    font-family: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    width: 100%;
+    color: white;
+    background: #203d53;
+    display: block;
+
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    > .columns, > .merchandise {
+      margin: 0 auto;
+      max-width: $max-width;
+    }
+
+    > .columns {
+      display: flex;
+      flex-direction: row;
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        // flex-direction: row;
+        // flex-wrap: wrap;
+      }
+
+      > .column {
+        flex: 1;
+        padding-right: 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        &:first-child {
+          flex-grow: 0;
+        }
+
+        @media (max-width: 600px) {
+          &:first-child {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    h6 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    ul li {
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    @media (max-width: 600px) {
+      h6 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      ul li {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+
+    .merchandise {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 20px;
+
+      @media (max-width: 600px) {
+        padding-top: 10px;
+      }
+
+      .QuatroDev {
+        flex: 1 0 auto;
+        background: url('//raw.githubusercontent.com/SimplrJS/docs/master/pages/_images/quatrodev-white-cloud.png') no-repeat;
+        background-size: cover;
+        // height: 35px;
+        // width: 200px;
+        width: 300px;
+        height: 52px;
+        opacity: 0.6;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

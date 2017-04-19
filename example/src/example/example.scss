@@ -1,0 +1,57 @@
+$border: 1px solid lightgrey;
+
+.example {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 20px 20px 20px;
+
+    .loader-block {
+        min-height: 300px;
+        display: flex;
+
+        .loader-example {
+            flex: 1 0 auto;
+        }
+
+        .loader-params {
+            max-width: 50%;
+            flex: 1 0 auto;
+            padding: 15px;
+            border-left: $border;
+
+            .param-field {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input { 
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .css-box {
+                width: 100%;
+                max-width: 100%;
+                resize: vertical;
+                max-height: 350px;
+                min-height: 80px;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .loader-block {
+            flex-direction: column;
+
+            .loader-example {
+                height: 300px;
+            }
+
+            .loader-params {
+                max-width: none;
+                border-left: none;
+                border-top: $border;
+            }
+        }
+    }
+}

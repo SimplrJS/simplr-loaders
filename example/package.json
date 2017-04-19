@@ -1,0 +1,51 @@
+{
+  "name": "simplr-loaders-example",
+  "version": "0.0.1",
+  "description": "Example for simplr-loaders.",
+  "main": "./dist/index.html",
+  "scripts": {
+    "test": "tsc -p . --noEmit",
+    "build": "npm run build-ts && npm run build-scss",
+    "watch": "npm run build-ts -- -w & npm run build-scss -- -w",
+    "build-ts": "tsc -p .",
+    "build-scss": "node-sass ./src -o ./dist",
+    "example": "npm run build-loaders && npm run prepare-example && npm run build",
+    "build-loaders": "cd ../ && npm run build",
+    "fetch-loaders": "copy-loaders.bat && npm run bundle",
+    "prepare-example": "init.bat && copy-loaders.bat && npm run fetch-loaders",
+    "bundle": "dts-bundle --configJson dts-bundle.json",
+    "server": "pushstate-server ./dist",
+    "clean": "rm -r -f example/@types & rm -r -f example/dist"
+  },
+  "keywords": [
+    "Test",
+    "example",
+    "simplr",
+    "loaders",
+    "simplr-loaders",
+    "react",
+    "QuatroCode",
+    "QuatroDev"
+  ],
+  "author": "Deividas Bakanas",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^15.0.6",
+    "@types/react-dom": "^0.14.18",
+    "dts-bundle": "^0.7.2",
+    "jspm": "^0.16.46",
+    "pushstate-server": "^3.0.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "dist",
+      "packages": "dist/libs"
+    },
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.23",
+      "react": "npm:react@^15.3.2",
+      "react-dom": "npm:react-dom@^15.3.2"
+    },
+    "devDependencies": {}
+  }
+}
