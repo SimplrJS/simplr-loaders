@@ -37,7 +37,7 @@
   "devDependencies": {
     "@types/classnames": "0.0.32",
     "@types/react": "^15.0.6",
-    "@types/react-dom": "^0.14.18",
+    "@types/react-dom": "^15.5.0",
     "dts-bundle": "^0.7.2",
     "jspm": "^0.16.46",
     "pushstate-server": "^3.0.0"
