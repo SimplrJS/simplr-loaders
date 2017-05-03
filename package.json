@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "React CSS loaders with no prerequisites for required styles loading.",
   "main": "dist/simplr-loaders.js",
+  "types": "@types/simplr-loaders.d.ts",
   "author": "simplrjs <simplr@quatrodev.com> (https://github.com/simplrjs)",
   "license": "MIT",
   "scripts": {
