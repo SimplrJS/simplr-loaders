@@ -1,6 +1,6 @@
 {
   "name": "simplr-loaders",
-  "version": "2.0.0-beta.3",
+  "version": "2.0.0",
   "description": "React CSS loaders with no prerequisites for required styles loading.",
   "main": "dist/simplr-loaders.js",
   "author": "simplrjs <simplr@quatrodev.com> (https://github.com/simplrjs)",
