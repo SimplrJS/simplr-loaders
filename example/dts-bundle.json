@@ -1,0 +1,6 @@
+{
+    "name": "simplr-loaders",
+    "main": "./@types/simplr-loaders.d.ts",
+    "out": "./simplr-loaders.d.ts",
+    "removeSource": true
+}
