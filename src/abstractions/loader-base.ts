@@ -74,7 +74,7 @@ export abstract class LoaderBase<TProps extends BaseProps, TState> extends React
      * @param props {TProps} props of loader component.
      */
     protected AppendStyles(styles: string, props: TProps) {
-        if (props.useDefaultStyle === false) {
+        if (props.useDefaultStyle === false || typeof (document) === "undefined") {
             return;
         }
 
