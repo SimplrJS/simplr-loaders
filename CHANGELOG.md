@@ -1,3 +1,9 @@
+## Chenges in 2.0.2 (2017-05-12)
+
+### [Fixes]
+- Fixed falsy check if `head` exists.
+- Skipping `head` check if `document` object is not available (for server side rendering).
+
 ## Changes in 2.0.0 (2017-04-18)
 
 ### [Breaking changes]
