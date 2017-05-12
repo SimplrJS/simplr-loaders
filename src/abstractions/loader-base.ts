@@ -74,20 +74,25 @@ export abstract class LoaderBase<TProps extends BaseProps, TState> extends React
      * @param props {TProps} props of loader component.
      */
     protected AppendStyles(styles: string, props: TProps) {
-        if (props.useDefaultStyle === false) {
+        if (props.useDefaultStyle === false || typeof (document) === "undefined") {
             return;
         }
 
         const head = document.getElementsByTagName("head")[0];
-        if (head != null && document.getElementById(this.LoaderId) == null) {
+
+        if (head == null) {
+            throw new Error("--SimplrLoaders-- <head> tag not found.");
+        }
+
+        const loaderStyle = document.getElementById(this.LoaderId);
+
+        if (loaderStyle == null) {
             const style = document.createElement("style");
             style.setAttribute("id", this.LoaderId);
             const textNode = document.createTextNode(styles);
 
             style.appendChild(textNode);
             head.appendChild(style);
-        } else {
-            throw new Error("--SimplrLoaders-- <head> tag not found.");
         }
     }
 
