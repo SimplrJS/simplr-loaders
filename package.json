@@ -14,7 +14,7 @@
     "css-to-ts": "css-to-ts --rootDir \"./dist\" --outDir \"./src\" --suffix style --header \"tslint:disable-next-line:max-line-length\" --exclude **/node_modules/** example/**",
     "build-scss": "node-sass --output-style compressed ./src -o ./dist",
     "build-ts": "tsc -p .",
-    "tslint": "tslint --project \"./tsconfig.json\" --c \"./tslint.json\"",
+    "tslint": "tslint --project \"./tsconfig.json\" -c \"./tslint.json\"",
     "uglifyjs": "glob-uglifyjs",
     "release": "npm run build && npm run tslint && npm run uglifyjs"
   },
@@ -42,16 +42,16 @@
   "devDependencies": {
     "css-to-ts": "0.1.0-beta.9",
     "glob-uglifyjs": "0.4.0",
-    "node-sass": "^4.5.0",
-    "tslint": "^5.1.0",
-    "typescript": "^2.0.9"
+    "node-sass": "^4.5.3",
+    "tslint": "^5.4.3",
+    "typescript": "^2.4.1"
   },
   "peerDependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
   "dependencies": {
-    "@types/react": "15.0.22",
-    "@types/react-dom": "^15.5.0"
+    "@types/react": "^15.0.33",
+    "@types/react-dom": "^15.5.1"
   }
 }
