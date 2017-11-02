@@ -4,3 +4,4 @@ example/node_modules
 example/@types
 builds
 src/*/*-loader-style.ts
+.vscode

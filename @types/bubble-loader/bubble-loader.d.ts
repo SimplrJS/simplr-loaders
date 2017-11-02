@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { LoaderBase, BaseProps } from "../abstractions/loader-base";
 /**
  * Class of bubble loader component.

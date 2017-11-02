@@ -32,15 +32,17 @@
     "type": "git",
     "url": "git+https://github.com/SimplrJS/simplr-loaders.git"
   },
-  "author": "simplrjs <simplr@quatrodev.com> (https://github.com/simplrjs)",
+  "author": "SimplrJS <simplr@quatrodev.com> (https://github.com/SimplrJS)",
   "license": "MIT",
   "devDependencies": {
-    "@types/classnames": "0.0.32",
-    "@types/react": "^15.0.6",
-    "@types/react-dom": "^15.5.0",
+    "@types/classnames": "2.2.3",
+    "@types/react": "^16.0.19",
+    "@types/react-dom": "^16.0.2",
     "dts-bundle": "^0.7.2",
     "jspm": "^0.16.46",
-    "pushstate-server": "^3.0.0"
+    "node-sass": "^4.5.3",
+    "pushstate-server": "^3.0.0",
+    "typescript": "^2.6.1"
   },
   "jspm": {
     "directories": {
@@ -49,9 +51,9 @@
     },
     "dependencies": {
       "classnames": "npm:classnames@^2.2.5",
-      "css": "github:systemjs/plugin-css@^0.1.23",
-      "react": "npm:react@^15.3.2",
-      "react-dom": "npm:react-dom@^15.3.2"
+      "css": "npm:systemjs-plugin-css@^0.1.36",
+      "react": "npm:react@^16.0.0",
+      "react-dom": "npm:react-dom@^16.0.0"
     },
     "devDependencies": {}
   },

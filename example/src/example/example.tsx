@@ -19,7 +19,12 @@ export class ExampleComponent extends React.Component<{}, State> {
 
     private onChange: OnChange = (id, params) => {
         this.setState((state: State) => {
-            state.loadersParams[id] = params;
+            const { loadersParams } = state;
+            loadersParams[id] = params;
+
+            return {
+                loadersParams
+            };
         });
     }
 

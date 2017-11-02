@@ -18,12 +18,12 @@ export class Layout extends React.Component<{}, {}> {
                     <Logo />
                     <nav>
                         <div className="link-container">
-                            <a href="https://simplrjs.com/docs">
+                            <a href="https://github.com/SimplrJS/simplr-loaders">
                                 Docs
                             </a>
                         </div>
                         <div className="link-container">
-                            <a href="https://github.com/simplrjs">Github</a>
+                            <a href="https://github.com/SimplrJS">Github</a>
                         </div>
                     </nav>
                 </section>
