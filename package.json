@@ -1,6 +1,6 @@
 {
   "name": "simplr-loaders",
-  "version": "2.0.2",
+  "version": "2.0.6",
   "description": "React CSS loaders with no prerequisites for required styles loading.",
   "main": "dist/simplr-loaders.js",
   "types": "@types/simplr-loaders.d.ts",
@@ -16,7 +16,8 @@
     "build-ts": "tsc -p .",
     "tslint": "tslint --project \"./tsconfig.json\" -c \"./tslint.json\"",
     "uglifyjs": "glob-uglifyjs",
-    "release": "npm run build && npm run tslint && npm run uglifyjs"
+    "release": "npm run build && npm run tslint && npm run uglifyjs",
+    "publish": "npm run release"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,7 @@
   "homepage": "https://github.com/SimplrJS/simplr-loaders",
   "devDependencies": {
     "css-to-ts": "0.1.0-beta.9",
-    "glob-uglifyjs": "0.4.0",
+    "glob-uglifyjs": "^0.4.0",
     "node-sass": "^4.5.3",
     "tslint": "^5.4.3",
     "typescript": "^2.4.1"
