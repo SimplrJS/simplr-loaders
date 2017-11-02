@@ -22,7 +22,7 @@
     "tslint": "tslint --project \"./tsconfig.json\" -c \"./tslint.json\"",
     "uglifyjs": "glob-uglifyjs",
     "release": "npm run build && npm run tslint && npm run uglifyjs",
-    "prepublish": "npm run release"
+    "prepublishOnly": "npm run release"
   },
   "repository": {
     "type": "git",
