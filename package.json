@@ -47,7 +47,7 @@
   "homepage": "https://github.com/SimplrJS/simplr-loaders",
   "devDependencies": {
     "css-to-ts": "^0.1.0",
-    "glob-uglifyjs": "^1.0.0",
+    "glob-uglifyjs": "^2.0.0",
     "node-sass": "^4.5.3",
     "rimraf": "^2.6.2",
     "tslint": "^5.4.3",
