@@ -1,6 +1,6 @@
 {
   "name": "simplr-loaders",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "React CSS loaders with no prerequisites for required styles loading.",
   "main": "dist/simplr-loaders.js",
   "types": "@types/simplr-loaders.d.ts",
