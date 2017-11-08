@@ -1,1 +1,1 @@
-export declare var BubbleLoaderStyle: string;
+export declare const BubbleLoaderStyle: string;

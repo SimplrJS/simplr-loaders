@@ -1,1 +1,1 @@
-export declare var SpinnerLoaderStyle: string;
+export declare const SpinnerLoaderStyle: string;
